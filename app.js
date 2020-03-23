@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 var imgs = ["https://pixabay.com/get/57e8d34a4c5aa914f6da8c7dda79367b113adee653516c4870277fdd934bc45ab1_640.jpg", "https://pixabay.com/get/55e2d2444e53a814f6da8c7dda79367b113adee653516c4870277fdd934bc45ab1_640.jpg", "https://pixabay.com/get/54e0d74a4853a814f6da8c7dda79367b113adee653516c4870277fdd934bc45ab1_640.jpg", "https://pixabay.com/get/52e6d7444c55a514f6da8c7dda79367b113adee653516c4870277fdd934bc75cb1_640.png"];
-var likes = [91, 216, 130, 44];
+var likes = [91, 216, 130, 65];
 app.get("/", function(req, res){
 	res.render("index", {imgs:imgs, likes:likes});
 });
