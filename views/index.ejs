@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 7: Pixabay using Express</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Pixabay Search (Express Version)</h1>
+            <form action='/getImages' method='POST'>
+                <label for="keyword">Keyword:</label>
+                <input id="keyword" type="text" name="keyword"><br>
+                <label for="orientation">Orientation:</label>
+                <select id="orientation" name="orientation">
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                </select>
+                <button id="submit">Search</button>
+            </form>
+        </div>
+        <div class="content">
+            <div class="likes">
+                <%likes.forEach(function(like){%>
+                    <div class="like"><p><%=like%></p></div>
+                <%});%>
+            </div>
+            <div class="imgs">
+                <%imgs.forEach(function(img){%>
+                    <div class="img"><img src='<%=img%>'></div>
+                <%});%>
+            </div> 
+        </div>
+    </body>
+</html>
